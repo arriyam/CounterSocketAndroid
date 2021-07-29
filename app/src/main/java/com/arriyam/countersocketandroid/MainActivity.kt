@@ -22,5 +22,14 @@ class MainActivity : AppCompatActivity() {
         counterBtn.setOnClickListener{
             mSocket.emit("counter")
         }
+
+        mSocket.on("counter") { args ->
+            if (args[0] != null) {
+                val counter = args[0] as Int
+                runOnUiThread {
+                    countTextView.text = counter.toString()
+                }
+            }
+        }
     }
 }
