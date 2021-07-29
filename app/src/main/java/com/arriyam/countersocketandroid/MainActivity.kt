@@ -10,6 +10,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // The following lines connects the Android app to the server.
+        SocketHandler.setSocket()
+        SocketHandler.establishConnection()
+
         val counterBtn = findViewById<Button>(R.id.counterBtn)
         val countTextView = findViewById<TextView>(R.id.countTextView)
 
