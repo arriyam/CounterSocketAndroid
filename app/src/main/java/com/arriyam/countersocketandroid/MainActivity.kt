@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         val counterBtn = findViewById<Button>(R.id.counterBtn)
         val countTextView = findViewById<TextView>(R.id.countTextView)
 
+        val mSocket = SocketHandler.getSocket()
+
         counterBtn.setOnClickListener{
 
         }
