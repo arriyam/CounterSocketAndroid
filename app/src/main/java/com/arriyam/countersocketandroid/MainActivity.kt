@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val mSocket = SocketHandler.getSocket()
 
         counterBtn.setOnClickListener{
-
+            mSocket.emit("counter")
         }
     }
 }
